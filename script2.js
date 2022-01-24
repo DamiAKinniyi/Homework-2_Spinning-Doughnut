@@ -103,16 +103,12 @@ scene.add( directionalLight2 )
     
 function animate() {
     requestAnimationFrame( animate );
-    scene.traverse((function(child){child.rotation.z += 0.01}))
-    renderer.render( scene, camera)
-   // window.addEventListener("mouseout", (function(){scene.traverse(function(child){
-        
-       // child.rotation.z += 0.01}); renderer.render( scene, camera )}), false)
-       
-
-   // window.addEventListener("mouseover", (function(){renderer.render( scene, camera)} ),false)
-    
-    
+    scene.traverse(function(child){
+        if (child.isMesh){
+            child.rotation.z +=0.01
+        }else{
+        }})
+    renderer.render( scene, camera)    
 }
         
 animate()
