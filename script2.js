@@ -93,7 +93,7 @@ directionalLight.position.z = 100
 scene.add( directionalLight )
 
 const directionalLight2 = new THREE.DirectionalLight( 0xffffff )
-directionalLight.intensity = 2
+directionalLight.intensity = 1
 directionalLight.position.z = -100
 scene.add( directionalLight2 )
 
